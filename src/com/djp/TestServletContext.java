@@ -34,12 +34,12 @@ public class TestServletContext extends HttpServlet {
         System.out.println(servletContext1.getContextPath());
 
         // 获取web项目中某一个资源对应的输入流
-        System.out.println(servletContext1.getResourceAsStream("index.jsp"));
+        System.out.println(servletContext1.getResourceAsStream("/index.jsp"));
         // 结果为java.io.ByteArrayInputStream@c6607f
 
         // 用类加载器的方式获取一个资源对应的输入流
         ClassLoader classLoader = this.getClass().getClassLoader();
-        System.out.println(classLoader.getResourceAsStream("web.xml"));
+        System.out.println(classLoader.getResourceAsStream("/web.xml"));
         // 结果是null
     }
 }
